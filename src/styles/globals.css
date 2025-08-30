@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 14px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+  
+  /* Dark Green Only Palette */
+  --dark-forest: #0b2818;
+  --dark-forest-light: #0f3420;
+  --dark-forest-dark: #071e10;
+  --hunter-green: #1a4c2d;
+  --hunter-green-light: #226538;
+  --hunter-green-dark: #143922;
+  --pine-green: #2d5a3d;
+  --pine-green-light: #3a6b4a;
+  --pine-green-dark: #20452e;
+  --sage-green: #4a6741;
+  --sage-green-light: #5c7d52;
+  --sage-green-dark: #3b5233;
+  --moss-green: #687d5a;
+  --moss-green-light: #7a8f6c;
+  --moss-green-dark: #56694a;
+  --olive-green: #7c8c6f;
+  --olive-green-light: #8e9e81;
+  --olive-green-dark: #6a7a5d;
+  --forest-shadow: #1e3b29;
+  --forest-mist: #5d7553;
+  --green-gradient-start: #0b2818;
+  --green-gradient-end: #4a6741;
+  --green-background: #f4f7f4;
+  --green-border: rgba(26, 76, 45, 0.15);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+  
+  /* Dark mode adjustments for green palette */
+  --dark-forest: #0f3420;
+  --dark-forest-light: #143922;
+  --dark-forest-dark: #0b2818;
+  --hunter-green: #226538;
+  --hunter-green-light: #2a7940;
+  --hunter-green-dark: #1a4c2d;
+  --pine-green: #3a6b4a;
+  --pine-green-light: #4a7d5a;
+  --pine-green-dark: #2d5a3d;
+  --sage-green: #5c7d52;
+  --sage-green-light: #6e8f64;
+  --sage-green-dark: #4a6741;
+  --moss-green: #7a8f6c;
+  --moss-green-light: #8ca17e;
+  --moss-green-dark: #687d5a;
+  --olive-green: #8e9e81;
+  --olive-green-light: #a0b093;
+  --olive-green-dark: #7c8c6f;
+  --forest-shadow: #2a7940;
+  --forest-mist: #6e8f64;
+  --green-gradient-start: #226538;
+  --green-gradient-end: #5c7d52;
+  --green-background: rgba(26, 76, 45, 0.08);
+  --green-border: rgba(34, 101, 56, 0.2);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Dark Green color utilities */
+  --color-dark-forest: var(--dark-forest);
+  --color-dark-forest-light: var(--dark-forest-light);
+  --color-dark-forest-dark: var(--dark-forest-dark);
+  --color-hunter-green: var(--hunter-green);
+  --color-hunter-green-light: var(--hunter-green-light);
+  --color-hunter-green-dark: var(--hunter-green-dark);
+  --color-pine-green: var(--pine-green);
+  --color-pine-green-light: var(--pine-green-light);
+  --color-pine-green-dark: var(--pine-green-dark);
+  --color-sage-green: var(--sage-green);
+  --color-sage-green-light: var(--sage-green-light);
+  --color-sage-green-dark: var(--sage-green-dark);
+  --color-moss-green: var(--moss-green);
+  --color-moss-green-light: var(--moss-green-light);
+  --color-moss-green-dark: var(--moss-green-dark);
+  --color-olive-green: var(--olive-green);
+  --color-olive-green-light: var(--olive-green-light);
+  --color-olive-green-dark: var(--olive-green-dark);
+  --color-forest-shadow: var(--forest-shadow);
+  --color-forest-mist: var(--forest-mist);
+  --color-green-background: var(--green-background);
+  --color-green-border: var(--green-border);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    cursor: none;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Outfit', sans-serif;
+    cursor: none;
+  }
+
+  /* Hide default cursor for all interactive elements */
+  a, button, [role="button"], input[type="submit"], input[type="button"], input, textarea, select {
+    cursor: none;
+  }
+
+  /* Ensure cursor is hidden on mobile devices */
+  @media (pointer: coarse) {
+    * {
+      cursor: auto;
+    }
+    
+    body {
+      cursor: auto;
+    }
+    
+    a, button, [role="button"], input[type="submit"], input[type="button"], input, textarea, select {
+      cursor: auto;
+    }
+  }
+}
+
+/* Dark Green color utility classes */
+@layer utilities {
+  .text-dark-forest { color: var(--dark-forest); }
+  .text-dark-forest-light { color: var(--dark-forest-light); }
+  .text-dark-forest-dark { color: var(--dark-forest-dark); }
+  .text-hunter-green { color: var(--hunter-green); }
+  .text-hunter-green-light { color: var(--hunter-green-light); }
+  .text-hunter-green-dark { color: var(--hunter-green-dark); }
+  .text-pine-green { color: var(--pine-green); }
+  .text-pine-green-light { color: var(--pine-green-light); }
+  .text-pine-green-dark { color: var(--pine-green-dark); }
+  .text-sage-green { color: var(--sage-green); }
+  .text-sage-green-light { color: var(--sage-green-light); }
+  .text-sage-green-dark { color: var(--sage-green-dark); }
+  .text-moss-green { color: var(--moss-green); }
+  .text-moss-green-light { color: var(--moss-green-light); }
+  .text-moss-green-dark { color: var(--moss-green-dark); }
+  .text-olive-green { color: var(--olive-green); }
+  .text-olive-green-light { color: var(--olive-green-light); }
+  .text-olive-green-dark { color: var(--olive-green-dark); }
+  .text-forest-shadow { color: var(--forest-shadow); }
+  .text-forest-mist { color: var(--forest-mist); }
+  
+  .bg-dark-forest { background-color: var(--dark-forest); }
+  .bg-dark-forest-light { background-color: var(--dark-forest-light); }
+  .bg-dark-forest-dark { background-color: var(--dark-forest-dark); }
+  .bg-hunter-green { background-color: var(--hunter-green); }
+  .bg-hunter-green-light { background-color: var(--hunter-green-light); }
+  .bg-hunter-green-dark { background-color: var(--hunter-green-dark); }
+  .bg-pine-green { background-color: var(--pine-green); }
+  .bg-pine-green-light { background-color: var(--pine-green-light); }
+  .bg-pine-green-dark { background-color: var(--pine-green-dark); }
+  .bg-sage-green { background-color: var(--sage-green); }
+  .bg-sage-green-light { background-color: var(--sage-green-light); }
+  .bg-sage-green-dark { background-color: var(--sage-green-dark); }
+  .bg-moss-green { background-color: var(--moss-green); }
+  .bg-moss-green-light { background-color: var(--moss-green-light); }
+  .bg-moss-green-dark { background-color: var(--moss-green-dark); }
+  .bg-olive-green { background-color: var(--olive-green); }
+  .bg-olive-green-light { background-color: var(--olive-green-light); }
+  .bg-olive-green-dark { background-color: var(--olive-green-dark); }
+  .bg-forest-shadow { background-color: var(--forest-shadow); }
+  .bg-forest-mist { background-color: var(--forest-mist); }
+  .bg-green-background { background-color: var(--green-background); }
+  
+  .border-dark-forest { border-color: var(--dark-forest); }
+  .border-hunter-green { border-color: var(--hunter-green); }
+  .border-pine-green { border-color: var(--pine-green); }
+  .border-sage-green { border-color: var(--sage-green); }
+  .border-moss-green { border-color: var(--moss-green); }
+  .border-olive-green { border-color: var(--olive-green); }
+  .border-forest-shadow { border-color: var(--forest-shadow); }
+  .border-forest-mist { border-color: var(--forest-mist); }
+  .border-green-border { border-color: var(--green-border); }
+  
+  .bg-gradient-green {
+    background: linear-gradient(135deg, var(--green-gradient-start), var(--green-gradient-end));
+  }
+  
+  .bg-gradient-green-subtle {
+    background: linear-gradient(135deg, var(--green-background), var(--background));
+  }
+  
+  .hover\:text-dark-forest:hover { color: var(--dark-forest); }
+  .hover\:text-hunter-green:hover { color: var(--hunter-green); }
+  .hover\:text-pine-green:hover { color: var(--pine-green); }
+  .hover\:text-sage-green:hover { color: var(--sage-green); }
+  .hover\:text-moss-green:hover { color: var(--moss-green); }
+  .hover\:text-olive-green:hover { color: var(--olive-green); }
+  .hover\:text-forest-shadow:hover { color: var(--forest-shadow); }
+  .hover\:text-forest-mist:hover { color: var(--forest-mist); }
+  
+  .hover\:bg-dark-forest:hover { background-color: var(--dark-forest); }
+  .hover\:bg-hunter-green:hover { background-color: var(--hunter-green); }
+  .hover\:bg-pine-green:hover { background-color: var(--pine-green); }
+  .hover\:bg-sage-green:hover { background-color: var(--sage-green); }
+  .hover\:bg-moss-green:hover { background-color: var(--moss-green); }
+  .hover\:bg-olive-green:hover { background-color: var(--olive-green); }
+  .hover\:bg-forest-shadow:hover { background-color: var(--forest-shadow); }
+  .hover\:bg-forest-mist:hover { background-color: var(--forest-mist); }
+  
+  .hover\:border-dark-forest:hover { border-color: var(--dark-forest); }
+  .hover\:border-hunter-green:hover { border-color: var(--hunter-green); }
+  .hover\:border-pine-green:hover { border-color: var(--pine-green); }
+  .hover\:border-sage-green:hover { border-color: var(--sage-green); }
+  .hover\:border-moss-green:hover { border-color: var(--moss-green); }
+  .hover\:border-olive-green:hover { border-color: var(--olive-green); }
+  .hover\:border-forest-shadow:hover { border-color: var(--forest-shadow); }
+  .hover\:border-forest-mist:hover { border-color: var(--forest-mist); }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+      font-family: 'Outfit', sans-serif;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+  font-family: 'Outfit', sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Offset for fixed navigation */
+}
